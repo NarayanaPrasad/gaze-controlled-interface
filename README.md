@@ -1,6 +1,6 @@
 <div align="center">
 
-# 👁️ Gaze Memory
+# 👁️ Gaze Controlled Interface
 
 **A memory-matching card game you play entirely with your eyes.**
 
