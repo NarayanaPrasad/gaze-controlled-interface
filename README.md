@@ -7,8 +7,7 @@
 No mouse. No keyboard. Just a webcam, your gaze, and a wink.
 
 ![Python](https://img.shields.io/badge/python-3.10-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-green)
 
 </div>
 
