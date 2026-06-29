@@ -867,11 +867,14 @@ const ringCanvas= document.getElementById('freeze-ring');
 const ringCtx   = ringCanvas.getContext('2d');
 
 function moveCursor(x,y,frozen) {
+  // Clamp to viewport so the cursor never flies off-screen
+  const cx = Math.max(0, Math.min(x, window.innerWidth  - 1));
+  const cy = Math.max(0, Math.min(y, window.innerHeight - 1));
   cursor.style.display = 'block';
-  cursor.style.left = x+'px'; cursor.style.top = y+'px';
+  cursor.style.left = cx+'px'; cursor.style.top = cy+'px';
   cursor.classList.toggle('frozen', frozen);
   ringCanvas.style.display = frozen ? 'block' : 'none';
-  ringCanvas.style.left = x+'px'; ringCanvas.style.top = y+'px';
+  ringCanvas.style.left = cx+'px'; ringCanvas.style.top = cy+'px';
 }
 
 function drawFreezeRing(progress) {

@@ -1,12 +1,12 @@
 <div align="center">
 
-# 👁️ Gaze Memory
+# 👁️ Gaze Controlled Interface
 
 **A memory-matching card game you play entirely with your eyes.**
 
 No mouse. No keyboard. Just a webcam, your gaze, and a wink.
 
-![Python](https://img.shields.io/badge/python-3.9%2B-blue)
+![Python](https://img.shields.io/badge/python-3.10-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 
@@ -59,10 +59,11 @@ flowchart LR
 Once trained, Python streams predicted gaze position to the browser ~30 times a second, and a tiny console window shows live face/model/EAR diagnostics — it's a status readout now, not a second display to keep in sync.
 
 ## Quick Start
+> **Requires Python 3.10.** MediaPipe ships version-pinned prebuilt wheels, and `pip install` commonly fails on other versions (especially 3.12+). Check yours with `python --version` before continuing.
 
 ```bash
-git clone https://github.com/yourname/gaze-memory.git
-cd gaze-memory
+git clone https://github.com/NarayanaPrasad/gaze-controlled-interface.git
+cd gaze-controlled-interface
 pip install -r requirements.txt
 python tracker.py
 ```
@@ -133,6 +134,9 @@ Most tracking behavior lives in `tracker.py`, near the top of the file:
 | `SAMPLES_PER_DOT` | `index.html` | `5` | Spacebar presses required per calibration dot |
 
 ## FAQ
+
+**`pip install -r requirements.txt` fails / MediaPipe won't install.**
+Check your Python version with `python --version` — MediaPipe requires Python 3.10. Newer versions (3.12+) often don't have compatible prebuilt wheels yet.
 
 **Calibration keeps warning "No face detected."**
 MediaPipe's iris detection needs decent, even light on your face — avoid strong backlighting, and make sure your whole face is in frame before pressing Spacebar.
